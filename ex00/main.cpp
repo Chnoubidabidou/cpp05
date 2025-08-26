@@ -6,7 +6,7 @@
 /*   By: lgrisel <lgrisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 15:57:55 by lgrisel           #+#    #+#             */
-/*   Updated: 2025/08/26 11:38:17 by lgrisel          ###   ########.fr       */
+/*   Updated: 2025/08/26 14:31:15 by lgrisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,14 @@
 
 int main()
 {
+	std::cout << "\n--- Default Bureaucrat creation ---" << std::endl;
+	Bureaucrat def;
+	std::cout << def << std::endl;
+
 	std::cout << "\n--- Valid Bureaucrat creation ---" << std::endl;
 	Bureaucrat alice("Alice", 42);
 	std::cout << alice << std::endl;
-
+	
 	std::cout << "\n--- Incrementing grade ---" << std::endl;
 	alice.incrementGrade();
 	std::cout << alice << std::endl;
