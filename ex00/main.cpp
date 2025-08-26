@@ -6,7 +6,7 @@
 /*   By: lgrisel <lgrisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 15:57:55 by lgrisel           #+#    #+#             */
-/*   Updated: 2025/07/17 16:49:37 by lgrisel          ###   ########.fr       */
+/*   Updated: 2025/08/26 11:38:17 by lgrisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,4 @@ int main()
 	{
 		std::cerr << "Caught exception: " << e.what() << std::endl;
 	}
-
-	return 0;
 }

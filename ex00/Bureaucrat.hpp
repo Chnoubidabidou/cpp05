@@ -6,7 +6,7 @@
 /*   By: lgrisel <lgrisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 15:57:54 by lgrisel           #+#    #+#             */
-/*   Updated: 2025/07/17 16:48:15 by lgrisel          ###   ########.fr       */
+/*   Updated: 2025/08/26 11:38:25 by lgrisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ class Bureaucrat
 	class GradeTooHighException : public std::exception
 	{
 		public:
-			char const  *what() const throw();
+			char const	*what() const throw();
 	};
 
 	class GradeTooLowException : public std::exception
 	{
 		public:
-			char const  *what() const throw();
+			char const	*what() const throw();
 	};
 
 	private:

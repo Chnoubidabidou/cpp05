@@ -6,7 +6,7 @@
 /*   By: lgrisel <lgrisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 15:57:53 by lgrisel           #+#    #+#             */
-/*   Updated: 2025/07/17 16:48:17 by lgrisel          ###   ########.fr       */
+/*   Updated: 2025/08/26 11:39:08 by lgrisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ const char	*Bureaucrat::GradeTooLowException::what() const throw()
 
 Bureaucrat::Bureaucrat(std::string name, int grade): _name(name), _grade(grade)
 {
+	std::cout << "Bureaucrat: Constructor called" << std::endl;
 	if (grade < 1)
 		throw (Bureaucrat::GradeTooHighException());
 	if (grade > 150)
 		throw (Bureaucrat::GradeTooLowException());
-	std::cout << "Bureaucrat: Constructor called" << std::endl;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &copy): _name(copy._name), _grade(copy._grade)
@@ -66,13 +66,13 @@ int	Bureaucrat::getGrade() const
 void	Bureaucrat::incrementGrade(void)
 {
 	this->_grade--;
-	if (this->_grade <= 1)
+	if (this->_grade < 1)
 		throw (Bureaucrat::GradeTooHighException());
 }
 
 void	Bureaucrat::decrementGrade(void)
 {
 	this->_grade++;
-	if (this->_grade >= 150)
+	if (this->_grade > 150)
 		throw (Bureaucrat::GradeTooLowException());
 }
