@@ -6,7 +6,7 @@
 /*   By: lgrisel <lgrisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 15:57:53 by lgrisel           #+#    #+#             */
-/*   Updated: 2025/08/26 14:59:53 by lgrisel          ###   ########.fr       */
+/*   Updated: 2025/08/26 15:01:56 by lgrisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,4 +75,17 @@ void	Bureaucrat::decrementGrade(void)
 	this->_grade++;
 	if (this->_grade > 150)
 		throw (Bureaucrat::GradeTooLowException());
+}
+
+void	Bureaucrat::signForm(Form &form)
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << this->_name << " signed " << form.getName() << std::endl;
+	}
+	catch (std::exception &e)
+	{
+		std::cout << this->_name << " couldn't sign " << form.getName() << " because his grade is too low" << std::endl;
+	}
 }
