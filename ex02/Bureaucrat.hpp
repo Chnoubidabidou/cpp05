@@ -6,16 +6,16 @@
 /*   By: lgrisel <lgrisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 15:57:54 by lgrisel           #+#    #+#             */
-/*   Updated: 2025/08/27 14:36:45 by lgrisel          ###   ########.fr       */
+/*   Updated: 2025/08/27 14:36:31 by lgrisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
-#include "Form.hpp"
+#include "AForm.hpp"
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -46,7 +46,8 @@ class Bureaucrat
 		int					getGrade() const;
 		void				incrementGrade();
 		void				decrementGrade();
-		void				signForm(Form &form);
+		void				signForm(AForm &form);
+		void				executeForm(const AForm &form);
 
 };
 

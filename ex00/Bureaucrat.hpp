@@ -6,7 +6,7 @@
 /*   By: lgrisel <lgrisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 15:57:54 by lgrisel           #+#    #+#             */
-/*   Updated: 2025/08/26 14:47:15 by lgrisel          ###   ########.fr       */
+/*   Updated: 2025/08/27 14:36:51 by lgrisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ class Bureaucrat
 
 		const std::string	&getName() const;
 		int					getGrade() const;
-		void				incrementGrade(void);
-		void				decrementGrade(void);
+		void				incrementGrade();
+		void				decrementGrade();
 
 };
 
