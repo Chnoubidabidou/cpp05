@@ -6,7 +6,7 @@
 /*   By: lgrisel <lgrisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 15:57:55 by lgrisel           #+#    #+#             */
-/*   Updated: 2025/08/27 15:46:26 by lgrisel          ###   ########.fr       */
+/*   Updated: 2025/08/28 11:48:00 by lgrisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 
 int main()
 {
-	std::cout << "\n=== Intern Tests ===\n";
 	Intern intern;
 
 	AForm* f1 = intern.makeForm("Shrubbery Creation", "tree");
@@ -32,6 +31,7 @@ int main()
 		delete f1;
 	}
 
+	std::cout << std:: endl;
 	AForm* f2 = intern.makeForm("Robotomy Request", "Marvin");
 	if (f2)
 	{
@@ -40,7 +40,8 @@ int main()
 		roboguy.executeForm(*f2);
 		delete f2;
 	}
-
+	
+	std::cout << std:: endl;
 	AForm* f3 = intern.makeForm("Presidential Pardon", "Zoidberg");
 	if (f3)
 	{
@@ -50,9 +51,8 @@ int main()
 		delete f3;
 	}
 
+	std::cout << std:: endl;
 	AForm* fail = intern.makeForm("FormThatDoesNotExist", "Nobody");
 	if (!fail)
 		std::cout << "Returned nullptr for unknown form as expected.\n";
-
-	std::cout << "\n✅ All tests completed.\n";
 }

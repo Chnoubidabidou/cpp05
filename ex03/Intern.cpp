@@ -6,7 +6,7 @@
 /*   By: lgrisel <lgrisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 15:40:26 by lgrisel           #+#    #+#             */
-/*   Updated: 2025/08/27 15:44:03 by lgrisel          ###   ########.fr       */
+/*   Updated: 2025/08/28 11:54:07 by lgrisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,9 @@ AForm	*Intern::makeForm(const std::string &name, const std::string &target)
 		if (forms[i].name == name)
 		{
 			std::cout << "Intern creates " << name << std::endl;
-			return forms[i].create(target);
+			return (forms[i].create(target));
 		}
 	}
 	std::cout << "Intern could not create " << name << ": form doesn't exist" << std::endl;
-	return NULL;
+	return (NULL);
 }

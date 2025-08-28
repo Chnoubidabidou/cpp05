@@ -6,7 +6,7 @@
 /*   By: lgrisel <lgrisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 15:57:55 by lgrisel           #+#    #+#             */
-/*   Updated: 2025/08/26 15:46:11 by lgrisel          ###   ########.fr       */
+/*   Updated: 2025/08/28 11:32:34 by lgrisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,22 @@ int main()
 	std::cout << ndaForm << std::endl;
 
 	std::cout << "\n--- Invalid Form creation (sign grade too high) ---" << std::endl;
-	try {
+	try
+	{
 		Form illegalForm("IllegalForm", false, 0, 20);
-	} catch (const std::exception &e) {
+	}
+	catch (const std::exception &e)
+	{
 		std::cerr << "Caught: " << e.what() << std::endl;
 	}
 
 	std::cout << "\n--- Invalid Form creation (exec grade too low) ---" << std::endl;
-	try {
+	try
+	{
 		Form illegalForm("IllegalForm", false, 50, 151);
-	} catch (const std::exception &e) {
+	}
+	catch (const std::exception &e)
+	{
 		std::cerr << "Caught: " << e.what() << std::endl;
 	}
 
@@ -57,5 +63,5 @@ int main()
 
 	Form assigned("AssignedForm", false, 100, 100);
 	assigned = original;
-	std::cout << "Assigned (via operator=):\n" << assigned << std::endl;
+	std::cout << "\nAssigned (via operator=):\n" << assigned << std::endl;
 }
